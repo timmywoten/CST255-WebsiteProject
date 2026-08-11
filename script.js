@@ -39,3 +39,13 @@ if (changeGameButton != null && gameImage != null && gameTitle != null && gameDe
         
     });
 }
+
+const contactForm = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
+if (contactForm){
+    contactForm.addEventListener("submit", function(event){
+        event.preventDefault();
+        formMessage.textContent = "Thanks for your message!";
+    });
+}
