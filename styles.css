@@ -30,17 +30,26 @@ h2 {
     margin-top: 30px;
 }
 
-/* nav */
+/* navigation */
 nav {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 nav a {
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 4px 10px;
+    box-sizing: border-box;
     color: #1f4e79;
     font-weight: bold;
-    margin: 0 10px;
+    text-align: center;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -49,6 +58,16 @@ nav a:hover {
 
 nav a:visited:hover {
     color: #ff6600;
+}
+
+nav a:focus-visible {
+    color: #ff6600;
+    outline: 3px solid #ff6600;
+    outline-offset: 1px;
+}
+
+nav a[aria-current="page"]{
+    text-decoration: underline;
 }
 
 /* links */
@@ -85,4 +104,16 @@ section {
 
 .hidden{
     display: none;
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    nav a {
+        width: 100%;
+    }
 }
